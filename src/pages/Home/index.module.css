@@ -1,0 +1,24 @@
+.container {
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+  background: #282c34;
+}
+
+.box {
+  padding-top: 150px;
+}
+
+.button {
+  padding: 10px 25px;
+  font-size: 16px;
+  color: #000;
+  background-color: #61dafb;
+  border: none;
+  outline: none;
+}
+
+.button:disabled {
+  color: #6f7685;
+  background-color: #94cad9;
+}
