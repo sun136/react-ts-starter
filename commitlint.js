@@ -24,7 +24,9 @@ if (!commitRE.test(msg)) {
         ${chalk.green(`🚀 perf(模块): 优化相关，比如提升性能、体验`)}
         ${chalk.green(`🍰 wip(模块): 阶段成品\n`)}
         ${chalk.green(`规则定义在 commitlint 文件中\n`)}
-        ${chalk.red(`See https://github.com/vuejs/core/blob/main/.github/commit-convention.md\n`)}`,
+        ${chalk.red(
+          `See https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular \n`,
+        )}`,
   );
   process.exit(1);
 }
