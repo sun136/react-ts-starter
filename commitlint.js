@@ -4,7 +4,7 @@ const msgPath = process.env.GIT_PARAMS || process.env.HUSKY_GIT_PARAMS;
 const msg = require('fs').readFileSync(msgPath, 'utf-8').trim();
 
 const commitRE =
-  /^(((\ud83c[\udf00-\udfff])|(\ud83d[\udc00-\ude4f\ude80-\udeff])|[\u2600-\u2B55]) )?(revert: )?(feat|fix|docs|ui|style|chore|locale|refactor|perf|wip)(\(.+\))?: .{1,50}/;
+  /^(((\ud83c[\udf00-\udfff])|(\ud83d[\udc00-\ude4f\ude80-\udeff])|[\u2600-\u2B55]) )?(revert: )?(feat|fix|docs|ui|style|test|chore|locale|refactor|perf|wip)(\(.+\))?: .{1,50}/;
 
 if (!commitRE.test(msg)) {
   console.log();
@@ -18,6 +18,7 @@ if (!commitRE.test(msg)) {
         ${chalk.green(`📝 docs(模块): 更新了一下文档`)}
         ${chalk.green(`🌷 ui(模块): 修改了一下样式`)}
         ${chalk.green(`📐 style(模块): 仅仅修正了代码格式`)}
+        ${chalk.green(`🔬 test(模块): 单元测试`)}
         ${chalk.green(`🏰 chore(模块): 对脚手架做了些更改`)}
         ${chalk.green(`🌐 locale(模块): 为国际化做了微小的贡献`)}
         ${chalk.green(`🎉 refactor(模块): 代码重构，没有新增功能`)}
